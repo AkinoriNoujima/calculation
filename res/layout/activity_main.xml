@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/oneImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/one_mode_btn" />
+
+    <ImageView
+        android:id="@+id/endlessImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/endless_mode_btn" />
+
+    <ImageView
+        android:id="@+id/maruImage"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/maru"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/batsuImage"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/batsu"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="タイマー"
+        android:textColor="#ffff66"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="正解数カウント"
+        android:textColor="#ffff66"
+        android:textSize="55sp" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timerText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="問題"
+        android:textColor="#33ffff"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/answerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="答え"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+    <ImageView
+        android:id="@+id/checkBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/answerText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/check_btn" />
+
+    <ImageView
+        android:id="@+id/btn8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/checkBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/btn8" />
+
+    <ImageView
+        android:id="@+id/btn7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/checkBtn"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/btn8"
+        android:src="@drawable/btn7" />
+
+    <ImageView
+        android:id="@+id/btn9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/checkBtn"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/btn8"
+        android:src="@drawable/btn9" />
+
+    <ImageView
+        android:id="@+id/btn5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn8"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/btn5" />
+
+    <ImageView
+        android:id="@+id/btn4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn8"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/btn5"
+        android:src="@drawable/btn4" />
+
+    <ImageView
+        android:id="@+id/btn6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn8"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/btn5"
+        android:src="@drawable/btn6" />
+
+    <ImageView
+        android:id="@+id/btn2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn5"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/btn2" />
+
+    <ImageView
+        android:id="@+id/btn1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn5"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/btn2"
+        android:src="@drawable/btn1" />
+
+    <ImageView
+        android:id="@+id/btn3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn5"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/btn2"
+        android:src="@drawable/btn3" />
+
+    <ImageView
+        android:id="@+id/btn0"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn2"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/btn2"
+        android:src="@drawable/btn0" />
+
+    <ImageView
+        android:id="@+id/minusBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn2"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/minus_btn" />
+
+    <ImageView
+        android:id="@+id/clearBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn2"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/btn8"
+        android:src="@drawable/clear_btn" />
+
+    <ImageView
+        android:id="@+id/passBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/pass_btn" />
+
+</RelativeLayout>

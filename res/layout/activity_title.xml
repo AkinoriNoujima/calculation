@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/title_back" >
+
+    <TextView
+        android:id="@+id/maxScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="ハイスコア"
+        android:textColor="#ff99ff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/centerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp" />
+
+    <ImageView
+        android:id="@+id/oneMinuteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/centerView"
+        android:src="@drawable/one_mode_btn" />
+
+    <ImageView
+        android:id="@+id/endlessBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/centerView"
+        android:src="@drawable/endless_mode_btn" />
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oneMinuteBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="プレイモードをタップしてね"
+        android:textColor="#33ff99"
+        android:textSize="30dp" />
+
+</RelativeLayout>
