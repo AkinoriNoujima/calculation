@@ -129,14 +129,10 @@ public class MainActivity extends Activity implements OnTouchListener {
 			pref = PreferenceManager.getDefaultSharedPreferences(this);
 			//データが無いときは0がデフォルトになる
 			maxScore = pref.getInt("maxScore", 0);
-			// カウントダウン開始
-			cdt.start();
 		} else {
 			timerText.setVisibility(View.INVISIBLE);
 			oneImage.setVisibility(View.INVISIBLE);
 		}
-		//問題作成
-		setQuestion();
 	}
 
 	/*-----------------------------------------------------------------------*/
@@ -145,6 +141,13 @@ public class MainActivity extends Activity implements OnTouchListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		//1分モード時のライフサイクルをケア
+		if (gameMode == 1) {
+			questionCount = 0;
+			correctCount = 0;
+			// カウントダウン開始
+			cdt.start();
+		}
 		// 音楽再生用(MediaPlayer)
 		mediaPlayer = MediaPlayer.create(this, R.raw.play);
 		// title音楽再生(ループあり)
@@ -152,6 +155,8 @@ public class MainActivity extends Activity implements OnTouchListener {
 		mediaPlayer.start();
 		//soundPlayer準備
 		initSoundPool();
+		//問題作成
+		setQuestion();
 	}
 
 	/*-----------------------------------------------------------------------*/
@@ -304,7 +309,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 
 	/*-----------------------------------------------------------------------*/
 	//Runnable
-	//結果欄を非表示にする
+	//マルバツの表示
 	/*-----------------------------------------------------------------------*/
 	private final Runnable invisible = new Runnable() {
 		@Override
@@ -342,7 +347,6 @@ public class MainActivity extends Activity implements OnTouchListener {
 		@Override
 		public void onTick(long millisUntilFinished) {
 			// インターバル(countDownInterval)毎に呼ばれる
-//			timerText.setText(Long.toString(millisUntilFinished / 1000 / 60) + ":" + Long.toString(millisUntilFinished / 1000 % 60));
 			timerText.setText(Long.toString(millisUntilFinished / 1000 % 60));
 		}
 	}

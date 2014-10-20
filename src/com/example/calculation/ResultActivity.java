@@ -14,16 +14,15 @@ import android.widget.TextView;
 
 public class ResultActivity extends Activity implements OnClickListener {
 
+	//各view
 	private TextView maxScoreText;
 	private TextView resultText;
 	private Button returnBtn;
 	private int correctCount;
 	private int questionCount;
 	private int maxScore;
-
 	//SharedPreference保存用
 	private SharedPreferences pref;
-
 	// 音楽再生用(MediaPlayer)
 	private MediaPlayer mediaPlayer;
 
@@ -107,5 +106,4 @@ public class ResultActivity extends Activity implements OnClickListener {
 		}
 		return super.dispatchKeyEvent(event);
 	}
-
 }

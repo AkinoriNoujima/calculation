@@ -16,15 +16,14 @@ import android.widget.TextView;
 
 public class TitleActivity extends Activity implements OnTouchListener {
 
+	//各view
 	private TextView maxScoreText;
 	private TextView infoText;
 	private ImageView oneMinuteBtn;
 	private ImageView endlessBtn;
 	private int maxScore;
-
 	//SharedPreference保存用
 	private SharedPreferences pref;
-
 	// 音楽再生用(MediaPlayer)
 	private MediaPlayer mediaPlayer;
 
@@ -107,7 +106,7 @@ public class TitleActivity extends Activity implements OnTouchListener {
 			}
 			break;
 
-			//離したとき
+		//離したとき
 		case MotionEvent.ACTION_UP:
 			//ゲームモードの情報を保持して画面遷移させる
 			switch (v.getId()) {
