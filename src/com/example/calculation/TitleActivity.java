@@ -113,14 +113,14 @@ public class TitleActivity extends Activity implements OnTouchListener {
 			case R.id.oneMinuteBtn:
 				oneMinuteBtn.setAlpha(255);
 				intent = new Intent(TitleActivity.this, MainActivity.class);
-				intent.putExtra("gameMode", 1);
+				intent.putExtra("gameMode", MainActivity.GAMEMODE_ONE);
 				startActivity(intent);
 				break;
 
 			case R.id.endlessBtn:
 				endlessBtn.setAlpha(255);
 				intent = new Intent(TitleActivity.this, MainActivity.class);
-				intent.putExtra("gameMode", 2);
+				intent.putExtra("gameMode", MainActivity.GAMEMODE_ENDLESS);
 				startActivity(intent);
 				break;
 			default:

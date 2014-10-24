@@ -21,6 +21,9 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnTouchListener {
 
+	//ゲームモード定数
+	public static final int GAMEMODE_ONE = 1;
+	public static final int GAMEMODE_ENDLESS = 2;
 	// handler用
 	private android.os.Handler handler = new android.os.Handler();
 	//各view
@@ -122,7 +125,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 		gameMode = (Integer) intent.getSerializableExtra("gameMode");
 
 		//ゲームモードによって表示と処理を分ける
-		if (gameMode == 1) {
+		if (gameMode == GAMEMODE_ONE) {
 			countText.setVisibility(View.INVISIBLE);
 			endlessImage.setVisibility(View.INVISIBLE);
 			//設定のSharedPreferenceを読み込む
@@ -142,7 +145,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 	protected void onResume() {
 		super.onResume();
 		//1分モード時のライフサイクルをケア
-		if (gameMode == 1) {
+		if (gameMode == GAMEMODE_ONE) {
 			questionCount = 0;
 			correctCount = 0;
 			// カウントダウン開始
@@ -176,7 +179,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 			soundPool = null;
 		}
 		//カウントダウンを停止
-		if (gameMode == 1) {
+		if (gameMode == GAMEMODE_ONE) {
 			cdt.cancel();
 		}
 	}
@@ -280,7 +283,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 	/*-----------------------------------------------------------------------*/
 	//setQuestion
 	/*-----------------------------------------------------------------------*/
-	public void setQuestion() {
+	private void setQuestion() {
 		tapFlag = false;
 		leftNumber = new Random().nextInt(10);
 		rightNumber = new Random().nextInt(10);
