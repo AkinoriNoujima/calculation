@@ -20,7 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnTouchListener {
-
+	//aaa
 	//ゲームモード定数
 	public static final int GAMEMODE_ONE = 1;
 	public static final int GAMEMODE_ENDLESS = 2;
